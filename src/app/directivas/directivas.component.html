@@ -1,0 +1,45 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col">
+            <h1 class="text-center">Directiva If</h1>
+        </div>
+        <div class="col">
+            <h1 class="text-center">Directiva For </h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control bg-dark text-white" id="floatingInput" placeholder="name@example.com" [(ngModel)]="Nombre" name="Nombre">
+                <label for="floatingInput">Nombre</label>
+              </div>
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control bg-dark text-white" id="floatingInput" placeholder="name@example.com" [(ngModel)]="Usuario" name="Usuario">
+                <label for="floatingInput">Usuario</label>
+              </div>
+            <div class="d-grid gap-2">
+            <button type="button" class="btn btn-outline-light" (click)="UsuarioRegistrado()">Registrarse</button>
+            </div>
+            <div *ngIf="Registrado; else sinRegistrar">
+                <h4 class="text-center">{{ Mensaje }}</h4>
+                <h5 class="text-center" [ngClass]="{NombreEspecial:Nombre=='Victor'}"><strong>Nombre:</strong> {{ Nombre }}</h5>
+                <h5 class="text-center"><strong>Usuario:</strong> {{ Usuario }}</h5>
+            </div>
+            <ng-template #sinRegistrar>
+                <h1 class="text-center">Nadie Registrado</h1>
+            </ng-template>
+        </div>
+        <div class="col">
+            <div>
+                <h1>Lenguajes De Programacion</h1>
+                <ul>
+                    <li *ngFor="let lenguaje of Lenguajes">
+                        {{ lenguaje.titulo }}
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+

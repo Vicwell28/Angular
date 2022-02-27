@@ -1,0 +1,27 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col">
+    
+        </div>
+        <div class="col">
+            <form>
+                <div class="form-floating mb-3">
+                    <input type="number" class="form-control bg-dark text-white" id="floatingInput" placeholder="name@example.com" [(ngModel)]="NumeroUno" name="NumeroUno">
+                    <label for="floatingInput">Número Uno</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="number" class="form-control bg-dark text-white" id="floatingInput" placeholder="name@example.com" [(ngModel)]="NumeroDos" name="NumeroDos">
+                    <label for="floatingInput">Número Dos</label>
+                </div>
+                <button type="submit" (click)="getSuma()" class="btn btn-outline-light m-1">Sumar</button>
+                <button type="submit" (click)="getRestar()" class="btn btn-outline-light m-1">Restar</button>
+                <button type="submit" (click)="getMult()" class="btn btn-outline-light m-1">Multiplicar</button>
+                <button type="submit" (click)="getDiv()" class="btn btn-outline-light m-1">Dividir</button>
+            </form>
+            <h1 class="text-center">Resultado: {{NumeroResultado}}</h1>
+        </div>
+        <div class="col">
+    
+        </div>
+    </div>
+</div>
