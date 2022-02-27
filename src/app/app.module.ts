@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProyectosComponent } from './proyectos/proyectos.component';
@@ -36,7 +37,9 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     RouterModule, 
-    FormsModule
+    FormsModule, 
+    BrowserAnimationsModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

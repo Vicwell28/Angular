@@ -1,2 +1,12 @@
-
-<p>animaciones works!</p>
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-5"></div>
+  <div class="col">
+    <div class="d-grid gap-2">
+      <button class="btn btn-outline-light" [@Disparador]="Estado" (click)="ReaccionBotn()" type="button">Button</button>
+      <button class="btn btn-outline-light" (mouseover)="ConsoleLog()" type="button">Button</button>
+    </div>
+  </div>
+  <div class="col-5"></div>
+  </div>
+</div>
